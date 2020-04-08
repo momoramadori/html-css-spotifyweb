@@ -8,7 +8,7 @@ body {
     color: white;
     background: rgb(140,136,11);
     background: linear-gradient(132deg, rgba(140,136,11,1) 0%, rgba(96,97,5,1) 36%, rgba(0,0,0,1) 100%);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .up {
@@ -39,6 +39,10 @@ aside li {
     padding: 5px 0;
 }
 
+aside p, aside span {
+    font-size: 14px;
+}
+
 .top-aside {
     display: flex;
     flex-direction: column;
@@ -50,11 +54,35 @@ aside li {
     padding-top: 20px;
 }
 
-
-.top-aside li a, .bottom-aside p {
+.top-aside li a, .bottom-aside p a {
     font-size: 18px;
     color: rgb(179, 179, 179);
-    padding: 10px;
+    padding: 10px 0;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.top-aside li {
+    position: relative;
+}
+
+.top-aside li a:hover, .bottom-aside p a:hover {
+    color: white;
+}
+
+.top-aside li a:hover::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: green;
+    left: -10px;
+    top: 0;
+    display: none;
+}
+
+.bottom-aside p {
+    margin: 10px 0;
 }
 
 .top-aside span, .bottom-aside span {
@@ -109,7 +137,23 @@ main {
 .menu a {
     color: rgb(179, 179, 179);
     text-decoration: none;
-    padding: 10px
+    padding: 10px;
+    position: relative;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu a:hover::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: green;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .disc-wrapper {
@@ -168,7 +212,7 @@ footer {
 }
 
 footer>div, footer>div>div {
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 footer img {
@@ -305,9 +349,20 @@ footer img {
     .disc-wrapper {
         justify-content: flex-start;
     }
-    
+
     #linea1 {
         width: 500px;
+    }
+
+    .top-aside li a:hover::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        background-color: green;
+        left: -10px;
+        top: 0;
+        display: block;
     }
 }
 
