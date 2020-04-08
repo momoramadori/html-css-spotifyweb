@@ -189,8 +189,9 @@ main {
 }
 
 .artist p {
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 5px;
+    text-shadow: 1px 1px 10px black;
 }
 
 .img-rounded {
@@ -388,16 +389,16 @@ footer img {
         width: 77vw;
     }
 
-    .disc-wrapper {
-        justify-content: flex-start;
-    }
-
     #linea1 {
         width: 500px;
     }
 }
 
 @media (min-width:992px) {
+
+    .disc-wrapper {
+        justify-content: flex-start;
+    }
 
     footer {
         justify-content: space-between;
@@ -412,7 +413,6 @@ footer img {
         align-items: center;
         justify-content: space-between;
     }
-
 }
 
 @media (min-width:1200px) {
@@ -441,7 +441,5 @@ footer img {
     .menu ul, .menu li {
         display: inline-block;
     }
-
-
 
 }
