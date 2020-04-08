@@ -240,13 +240,24 @@ footer img {
     color: rgb(179, 179, 179);
 }
 
+.footer-left i:hover {
+    color: white;
+}
 #fc-top, #fc-bottom {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#fc-top i:nth-of-type(3) {
+#fc-top a, .footer-right a {
+    color: rgb(179, 179, 179);
+}
+
+#fc-top a:hover, .footer-right a:hover {
+    color: white;
+}
+
+#fc-top a:nth-of-type(3) i {
     font-size: 30px;
 }
 
@@ -266,6 +277,10 @@ footer img {
     width: 100px;
 }
 
+.linea {
+    position: relative;
+}
+
 .linea i {
     position: absolute;
     color: white;
@@ -274,12 +289,27 @@ footer img {
     transform: translateY(-50%);
 }
 
-.footer-right>i {
+.footer-right>a {
     padding: 0 10px;
 }
 
 .footer-right {
     display: none;
+}
+
+.linea:hover i {
+    font-size: 20px;
+}
+
+.linea:hover::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: green;
 }
 
 /* Media queries */
