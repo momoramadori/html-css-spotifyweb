@@ -4,19 +4,56 @@
     box-sizing: border-box;
 }
 
-
 aside {
     float: left;
-    width: 20vw;
+    width: 15vw;
     height: calc( 100vh - 100px);
     background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside div {
+    background-color: yellow;
 }
 
 main {
     float: left;
-    width: 80vw;
+    width: 85vw;
     height: calc( 100vh - 100px);
     background-color: blue;
+    overflow-y: scroll;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu ul, .menu li {
+    display: none;
+}
+
+.disc-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.artist {
+    padding: 20px 5px;
+}
+
+.container>p {
+    padding-left: 20px;
+}
+
+.disc-wrapper img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
 }
 
 footer {
@@ -24,4 +61,37 @@ footer {
     width: 100vw;
     height: 100px;
     background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer>div {
+    padding: 0 10px;
+}
+.footer-right {
+    display: none;
+}
+
+
+@media (min-width:768px) {
+
+    .footer-right {
+        display: block;
+    }
+
+    .disc-wrapper {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width:992px) {
+
+    .menu ul, .menu li {
+        display: inline-block;
+    }
+
+    .hamb {
+        display: none;
+    }
 }
