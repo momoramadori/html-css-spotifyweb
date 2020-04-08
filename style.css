@@ -89,19 +89,17 @@ main {
 }
 
 .container>i {
-    padding: 15px 10px;
+    padding: 15px 10px 0 10px;
     font-size: 35px;
 }
 
 .container>p {
     font-size: 35px;
-    margin-top: 35px;
     color: white;
 }
 
 .menu {
     text-align: center;
-    padding-top: 30px;
 }
 
 .menu ul, .menu li {
@@ -119,16 +117,33 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .disc-wrapper img {
-    width: 200px;
-    height: auto;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 10px black;
 }
+
 .artist {
-    padding: 20px 5px;
+    padding: 10px 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.img-rounded {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
 }
 
 .container {
@@ -159,7 +174,22 @@ footer>div {
     display: none;
 }
 
+@media (min-width:568px) {
 
+    .disc-wrapper img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .artist {
+        padding: 20px 20px;
+    }
+
+    .artist p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
 @media (min-width:768px) {
 
     aside {
@@ -197,6 +227,10 @@ footer>div {
         display: none;
     }
 
+    .container>p {
+        margin-top: 20px;
+    }
+
     .footer-right {
         display: block;
     }
@@ -210,10 +244,14 @@ footer>div {
 @media (min-width:1200px) {
 
     .container {
-        width: 80%;
+        width: 85%;
         margin: auto;
     }
 
+    .menu {
+        padding-top: 30px;
+    }
+    
     .menu ul, .menu li {
         display: inline-block;
     }
