@@ -81,6 +81,14 @@ aside p, aside span {
     display: none;
 }
 
+#icon {
+    width: 40px;
+}
+
+.bottom-aside {
+    text-align: center;
+}
+
 .bottom-aside p {
     margin: 10px 0;
 }
@@ -89,7 +97,7 @@ aside p, aside span {
     display: none;
 }
 
-.recent {
+#recent-list {
     margin-top: 20px;
     display: none;
 }
@@ -97,14 +105,6 @@ aside p, aside span {
 #logo-full {
     display: none;
     width: 150px;
-}
-
-#icon {
-    width: 40px;
-}
-
-.bottom-aside {
-    text-align: center;
 }
 
 /* Styling main */
@@ -116,6 +116,12 @@ main {
     overflow-y: scroll;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .container>i {
     padding: 15px 10px 0 10px;
     font-size: 35px;
@@ -124,6 +130,9 @@ main {
 .container>p {
     font-size: 35px;
     color: white;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 .menu {
@@ -188,16 +197,6 @@ main {
     border-radius: 50%;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.container>p {
-    padding-left: 20px;
-    font-weight: bold;
-}
-
 /* Styling footer */
 
 footer {
@@ -205,26 +204,30 @@ footer {
     width: 100vw;
     height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: rgb(40, 40, 40);
     color: rgb(179, 179, 179);
-}
-
-footer>div, footer>div>div {
-    padding: 0 15px;
-}
-
-footer img {
-    width: 50px;
-    height: auto;
-    object-fit: contain;
 }
 
 .footer-left {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+footer>div {
+    padding: 0 20px;
+}
+
+.footer-left>div {
+    padding-right: 10px;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
 }
 
 .footer-left p {
@@ -243,6 +246,7 @@ footer img {
 .footer-left i:hover {
     color: white;
 }
+
 #fc-top, #fc-bottom {
     display: flex;
     justify-content: space-around;
@@ -269,7 +273,7 @@ footer img {
 }
 
 #linea1 {
-    width: 200px;
+    width: 150px;
     margin-top: 20px;
 }
 
@@ -289,12 +293,12 @@ footer img {
     transform: translateY(-50%);
 }
 
-.footer-right>a {
-    padding: 0 10px;
-}
-
 .footer-right {
     display: none;
+}
+
+.footer-right>a {
+    padding: 0 10px;
 }
 
 .linea:hover i {
@@ -313,6 +317,11 @@ footer img {
 }
 
 /* Media queries */
+
+@media (min-width: 400px) {
+    #linea1 {
+        width: 250px }
+}
 
 @media (min-width:568px) {
 
@@ -337,14 +346,6 @@ footer img {
         width: 23vw
     }
 
-    main {
-        width: 77vw;
-    }
-
-    footer {
-        justify-content: space-between;
-    }
-
     .top-aside {
         display: flex;
         flex-direction: column;
@@ -354,34 +355,6 @@ footer img {
     .top-aside span, .bottom-aside span {
         display: inline;
         padding-left: 10px;
-    }
-
-    .recent {
-        display: block;
-    }
-
-    .bottom-aside {
-        text-align: left;
-    }
-
-    #logo-full {
-        display: inline-block;
-    }
-
-    #icon {
-        display: none;
-    }
-
-    .container>p {
-        margin-top: 20px;
-    }
-
-    .disc-wrapper {
-        justify-content: flex-start;
-    }
-
-    #linea1 {
-        width: 500px;
     }
 
     .top-aside li a:hover::after {
@@ -394,9 +367,45 @@ footer img {
         top: 0;
         display: block;
     }
+
+    #logo-full {
+        display: inline-block;
+    }
+
+    #icon {
+        display: none;
+    }
+
+    #recent-list {
+        display: block;
+    }
+
+    .bottom-aside {
+        text-align: left;
+    }
+
+    main {
+        width: 77vw;
+    }
+
+    .disc-wrapper {
+        justify-content: flex-start;
+    }
+
+    #linea1 {
+        width: 500px;
+    }
 }
 
 @media (min-width:992px) {
+
+    footer {
+        justify-content: space-between;
+    }
+
+    .footer-left p {
+        display: block;
+    }
 
     .footer-right {
         display: flex;
@@ -404,15 +413,25 @@ footer img {
         justify-content: space-between;
     }
 
-    .footer-left p {
-        display: block;
-    }
 }
+
 @media (min-width:1200px) {
+
+    aside {
+        width: 15vw
+    }
+
+    main {
+        width: 85vw;
+    }
 
     .container {
         width: 85%;
         margin: auto;
+    }
+
+    .hamb {
+        display: none;
     }
 
     .menu {
@@ -423,15 +442,6 @@ footer img {
         display: inline-block;
     }
 
-    .hamb {
-        display: none;
-    }
 
-    aside {
-        width: 15vw
-    }
 
-    main {
-        width: 85vw;
-    }
 }
