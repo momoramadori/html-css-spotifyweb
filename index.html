@@ -4,39 +4,78 @@
         <meta charset="utf-8">
         <title>Spotify</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a41fcd4d62.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <aside>
             <div>
-                <div>
-                    <img id="logo-full" src="img/spotify-logo.png" alt="">
-                    <img src="img/spotify-svgrepo-com.svg" alt="">
+                <div class="top-aside">
+                    <img id="logo-full" src="img/spotify-logo.png" alt="logo">
+                    <img id="icon" src="img/spoty-icon.png" alt="icon">
                 </div>
-                <div class="">Lorem</div>
-                <div class="">Lorem</div>
+                <div class="search-bar top-aside">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-search"></i>
+                                <span>Cerca</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-book-open"></i>
+                                <span>La tua libreria</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recent">
+                    <p class="up">Ascoltati di Recente</p>
+                    <ul>
+                        <li>
+                            <p>iwebiwbc</p>
+                            <p class="up">Artista</p>
+                        </li>
+                        <li>
+                            <p>iwebiwbc</p>
+                            <p class="up">Artista</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="">lorem</div>
+            <div class="bottom-aside">
+                <p><i class="far fa-arrow-alt-circle-down"></i><span>Install App</span></p>
+                <hr>
+                <p><i class="far fa-user"></i><span>momoramadori</span></p>
+            </div>
         </aside>
         <main>
             <div class="container">
                 <i class="fas fa-bars hamb"></i>
                 <div class="menu">
                     <ul>
-                        <li>In evidenza</li>
-                        <li>Podcast</li>
-                        <li>Classifiche</li>
-                        <li>Generi e mood</li>
-                        <li>Nuove uscite</li>
-                        <li>Scopri</li>
+                        <li><a class="up" href="#">In evidenza</a></li>
+                        <li><a class="up" href="#">Podcast</a></li>
+                        <li><a class="up" href="#">Classifiche</a></li>
+                        <li><a class="up" href="#">Generi e mood</a></li>
+                        <li><a class="up" href="#">Nuove uscite</a></li>
+                        <li><a class="up" href="#">Scopri</a></li>
                     </ul>
                 </div>
                 <p>Creato per te</p>
                 <div class="disc-wrapper">
                     <div class="artist">
+                        <img src="img/fabri-album.jpg" alt="Guerra e Pace">
+                        <p>Guerra e Pace</p>
+                    </div>
+                    <div class="artist">
                         <img src="img/ultimo.jpg" alt="Ultimo">
-                        <p>Ultimo</p>
+                        <p>U</p>
                     </div>
                     <div class="artist">
                         <img src="img/ultimo.jpg" alt="Ultimo">
@@ -47,19 +86,15 @@
                         <p>Ultimo</p>
                     </div>
                     <div class="artist">
-                        <img src="img/ultimo.jpg" alt="Ultimo">
-                        <p>Ultimo</p>
-                    </div>
-                    <div class="artist">
-                        <img src="img/ultimo.jpg" alt="Ultimo">
-                        <p>Ultimo</p>
+                        <img src="img/mahmood-album.jpg" alt="Gioventù bruciata">
+                        <p>Gioventù Bruciata</p>
                     </div>
                     <div class="artist">
                         <img src="img/ultimo.jpg" alt="Ultimo">
                         <p>Ultimo</p>
                     </div>
                 </div>
-                <p>Creato per te</p>
+                <p>Recently played</p>
                 <div class="disc-wrapper">
                     <div class="artist">
                         <img src="img/ultimo.jpg" alt="Ultimo">
@@ -86,7 +121,7 @@
                         <p>Ultimo</p>
                     </div>
                 </div>
-                <p>Creato per te</p>
+                <p>Playlists</p>
                 <div class="disc-wrapper">
                     <div class="artist">
                         <img src="img/ultimo.jpg" alt="Ultimo">
