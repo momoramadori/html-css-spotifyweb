@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+aside {
+    float: left;
+    width: 20vw;
+    height: calc( 100vh - 100px);
+    background-color: red;
+}
+
+main {
+    float: left;
+    width: 80vw;
+    height: calc( 100vh - 100px);
+    background-color: blue;
+}
+
+footer {
+    float: left;
+    width: 100vw;
+    height: 100px;
+    background-color: green;
+}
