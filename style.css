@@ -294,6 +294,25 @@ footer img {
     transform: translateY(-50%);
 }
 
+#linea1::after, #linea1::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    font-size: 12px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+#linea1::before {
+    content: "2:02";
+    left: -30px;
+}
+
+#linea1::after {
+    content: "5:10";
+    right: -30px;
+}
+
 .footer-right {
     display: none;
 }
@@ -321,7 +340,12 @@ footer img {
 
 @media (min-width: 400px) {
     #linea1 {
-        width: 250px }
+        width: 250px
+    }
+
+    #linea1::after, #linea1::before {
+        display: block;
+    }
 }
 
 @media (min-width:568px) {
