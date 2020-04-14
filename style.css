@@ -19,7 +19,7 @@ body {
 
 aside {
     float: left;
-    width: 15vw;
+    width: 15%;
     height: calc( 100vh - 100px);
     background-color: rgba(0,0,0,0.8);
     display: flex;
@@ -111,7 +111,7 @@ aside p, aside span {
 
 main {
     float: left;
-    width: 85vw;
+    width: 85%;
     height: calc( 100vh - 100px);
     overflow-y: scroll;
 }
@@ -294,21 +294,25 @@ footer img {
     transform: translateY(-50%);
 }
 
-#linea1::after, #linea1::before {
+#fc-bottom {
+    position: relative;
+}
+
+#fc-bottom::after, #fc-bottom::before {
     content: "";
     position: absolute;
-    top: 50%;
+    bottom: -12px;
     font-size: 12px;
     transform: translateY(-50%);
     display: none;
 }
 
-#linea1::before {
+#fc-bottom::before {
     content: "2:02";
     left: -30px;
 }
 
-#linea1::after {
+#fc-bottom::after {
     content: "5:10";
     right: -30px;
 }
@@ -330,11 +334,12 @@ footer img {
     position: absolute;
     height: 3px;
     width: 40%;
-    top: 50%;
+    bottom:0;
     left: 0;
     transform: translateY(-50%);
     background-color: green;
 }
+
 
 /* Media queries */
 
@@ -343,7 +348,7 @@ footer img {
         width: 250px
     }
 
-    #linea1::after, #linea1::before {
+    #fc-bottom::after, #fc-bottom::before {
         display: block;
     }
 }
@@ -368,7 +373,11 @@ footer img {
 @media (min-width:768px) {
 
     aside {
-        width: 23vw
+        width: 23%;
+    }
+
+    main {
+        width: 77%;
     }
 
     .top-aside {
@@ -409,10 +418,6 @@ footer img {
         text-align: left;
     }
 
-    main {
-        width: 77vw;
-    }
-
     #linea1 {
         width: 500px;
     }
@@ -442,11 +447,11 @@ footer img {
 @media (min-width:1200px) {
 
     aside {
-        width: 15vw
+        width: 15%;
     }
 
     main {
-        width: 85vw;
+        width: 85%;
     }
 
     .container {
